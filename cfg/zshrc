@@ -1,0 +1,62 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
+
+# Get initial time
+bootTimeStart=$(date +%s)
+
+# To prevent "Warning: Homebrew's sbin was not found in your PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+# BEGIN ANSIBLE MANAGED BLOCK: base
+HOMEBREW_PREFIX=$(brew --prefix)
+
+source "${HOMEBREW_PREFIX}/share/antigen/antigen.zsh"
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+antigen bundles <<EOBUNDLES
+  osx
+  git
+  vagrant
+  gcloud
+
+  greymd/docker-zsh-completion
+
+  # Syntax highlighting bundle.
+  zsh-users/zsh-syntax-highlighting
+
+  # Fish-like auto suggestions
+  zsh-users/zsh-autosuggestions
+
+  # Extra zsh completions
+  zsh-users/zsh-completions
+
+  kubectl
+  kube-ps1
+EOBUNDLES
+
+# Load the theme.
+antigen theme agnoster
+#antigen theme romkatv/powerlevel10k
+
+# Tell Antigen that you're done.
+antigen apply
+
+# Modify prompt
+DEFAULT_USER=$(whoami)
+
+# Add kube cluster into prompt
+PROMPT=$PROMPT'$(kube_ps1) '
+
+# Load custom aliases dynamically
+for alias_file in "${HOME}/Code/ImaginateScata/github.com/dotfiles/cfg/aliases/aliases"*".zsh"; do
+    source "${alias_file}"
+done
+
+#bootTimeDuration=$((($(date +%s) - $bootTimeStart)/1000000))
+#echo $bootTimeDuration ms overall boot duration

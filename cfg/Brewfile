@@ -1,0 +1,98 @@
+tap 'caskroom/cask' # Required for installing applications
+
+brew 'mas' # Command line tools for app store https://github.com/mas-cli/mas
+
+# Tool for writing to ntfs drives
+cask 'osxfuse' # required for ntfs-3g
+brew 'ntfs-3g'
+
+# Company Tools
+cask 'google-drive-file-stream'
+cask 'microsoft-office'
+#mas 'Slack', id: 803453959 # will fail on first install, apps must be 'purchased' manually first
+#cask 'skype7'
+
+cask 'google-backup-and-sync'
+
+# Source control
+brew 'git'
+cask 'sourcetree'
+cask 'github'
+
+brew 'ansible'
+
+# Browsers
+cask 'firefox'
+cask 'google-chrome'
+cask 'opera'
+cask 'tor-browser'
+cask 'brave-browser'
+
+cask 'silverlight'
+
+cask 'authy'
+
+cask 'iterm2' # Terminal emulator
+
+cask 'flux' # Adjust screen colour temperature
+
+cask 'vlc' # Video player
+
+# Virtual Machines
+#cask 'virtualbox'
+cask 'homebrew/cask-versions/virtualbox-beta'
+cask 'virtualbox-extension-pack'
+cask 'vagrant'
+
+# Remote Desktop
+tap 'caskroom/versions'
+cask 'microsoft-remote-desktop-beta'
+
+# Docker tools
+cask 'docker', restart_service: true
+brew 'docker-compose'
+
+# Kubernetes tools
+cask 'minikube'
+brew 'helm'
+brew 'kubectx', args: ["--with-short-names"]
+tap 'blendle/blendle'
+brew 'kns'
+tap 'johanhaleby/kubetail'
+brew 'kubetail'
+brew 'kind'
+brew 'kustomize'
+brew 'stern'
+brew 'pcre'
+
+tap 'int128/kubelogin'
+brew 'kubelogin'
+
+# IDE / Text Editor
+cask 'sublime-text'
+cask 'intellij-idea'
+cask 'visual-studio-code'
+
+mas 'LastPass', id: 926036361 # Password manager
+
+# AWS CLI via Okta
+tap 'versent/taps'
+brew 'versent/taps/saml2aws'
+brew 'python'
+brew 'awscli'
+
+#mas 'Noizio', id: 928871589
+
+#tap 'caskroom/drivers' was remove as itv caused issues with displaylink
+
+cask 'appcleaner'
+
+cask 'nordvpn'
+
+brew 'unix2dos'
+
+cask 'calibre'
+
+cask 'launchcontrol'
+
+brew 'antigen'
