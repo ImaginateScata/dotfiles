@@ -114,6 +114,10 @@ Using settings sync, copy down the settings from [ImaginateScata](https://gist.g
 * Sheets
 * Slides
 
+### Settings
+
+* Offer to save passwords - off
+
 ## Firefox Extenstions
 
 * [One Tab](https://addons.mozilla.org/en-US/firefox/addon/onetab/)
@@ -121,3 +125,7 @@ Using settings sync, copy down the settings from [ImaginateScata](https://gist.g
 * [LastPass](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/)
 * [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/)
 * [Okta](https://addons.mozilla.org/en-US/firefox/addon/okta-browser-plugin/)
+
+### Settings
+
+* Ask to save logins and passwords - Off
