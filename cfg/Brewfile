@@ -50,7 +50,6 @@ cask 'docker', restart_service: true
 brew 'docker-compose'
 
 # Kubernetes tools
-cask 'minikube'
 brew 'helm'
 brew 'kubectx', args: ["--with-short-names"]
 tap 'blendle/blendle'
