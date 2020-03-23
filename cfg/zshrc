@@ -38,6 +38,7 @@ antigen bundles <<EOBUNDLES
 
   kubectl
   kube-ps1
+  istioctl
 EOBUNDLES
 
 # Load the theme.
