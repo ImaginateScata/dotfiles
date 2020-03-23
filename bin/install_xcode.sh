@@ -11,7 +11,6 @@ if type xcode-select >&- && xpath=$( xcode-select --print-path ) &&
   echo "Xcode CLI tools OK"
 else
   echo "Xcode CLI tools not found. Installing them..."
-  exit
 
   # install the tool for our specific OS version
   version=$(sw_vers -productVersion) 
