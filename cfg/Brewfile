@@ -51,7 +51,8 @@ brew 'docker-compose'
 
 # Kubernetes tools
 brew 'helm'
-brew 'kubectx', args: ["--with-short-names"]
+brew 'helm@2'
+brew 'kubectx'
 tap 'blendle/blendle'
 brew 'kns'
 tap 'johanhaleby/kubetail'
