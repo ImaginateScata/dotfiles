@@ -24,7 +24,7 @@ alias wifi_restart='networksetup -setairportpower en0 off; networksetup -setairp
 
 # SPEEDTEST
 alias fast='curl -fsSL https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 - --exclude 9660'
-alias fast_me='curl -fsSL https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 - --server 2225 --exclude 9660'
+alias fast_me='curl -fsSL https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | SSL_CERT_FILE=~/.certs/zscalar.pem python3 - --server 2225 --exclude 9660'
 
 # SECURITY / KEYCHAIN
 password_store() { if [ "${#}" -eq 2 ]; then security add-generic-password -a "${USER}" -s "${1}" -w "${2}" -T "$(which security)" ; else echo "Pass two param; the key and the password" ; fi ; }
