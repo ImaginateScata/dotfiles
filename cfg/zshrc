@@ -59,5 +59,10 @@ for alias_file in "${HOME}/Code/ImaginateScata/github.com/dotfiles/cfg/aliases/a
     source "${alias_file}"
 done
 
-#bootTimeDuration=$((($(date +%s) - $bootTimeStart)/1000000))
-#echo $bootTimeDuration ms overall boot duration
+# Load custom integrations dynamically
+for integrations_file in "${HOME}/Code/ImaginateScata/github.com/dotfiles/cfg/integration/"*".zsh"; do
+    source "${integrations_file}"
+done
+
+#bootTimeDuration=$((($(date +%s) - ${bootTimeStart})/1000000))
+#echo "${bootTimeDuration} ms overall boot duration"
