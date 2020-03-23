@@ -31,3 +31,13 @@ password_store() { if [ "${#}" -eq 2 ]; then security add-generic-password -a "$
 password_update() { if [ "${#}" -eq 2 ]; then security add-generic-password -a "${USER}" -s "${1}" -w "${2}" -T "$(which security)" -U ; else echo "Pass two param; the key and the password" ; fi ; }
 password_retrieve() { if [ "${#}" -eq 1 ]; then security find-generic-password -a "${USER}" -s "${1}" -w -D "application password" ; else echo "Pass one param; the key of the password" ; fi ; }
 password_delete() { if [ "${#}" -eq 1 ]; then security delete-generic-password -a "${USER}" -s "${1}" ; else echo "Pass one param; the key to be deleted" ; fi ; }
+
+# DEFAULT CODE EDITOR FOR KUBE
+export KUBE_EDITOR='code --wait'
+
+# DO NOT PAGE WITH AWSCLI
+export AWS_PAGER=""
+
+# KUBE ALIASES
+alias kubectx=kctx
+alias kubens=kns
