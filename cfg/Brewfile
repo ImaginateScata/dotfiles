@@ -60,6 +60,7 @@ brew 'kubetail'
 brew 'kind'
 brew 'kustomize'
 brew 'stern'
+brew 'istioctl'
 brew 'pcre'
 
 tap 'int128/kubelogin'
