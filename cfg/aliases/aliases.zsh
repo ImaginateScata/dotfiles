@@ -39,5 +39,5 @@ export KUBE_EDITOR='code --wait'
 export AWS_PAGER=""
 
 # KUBE ALIASES
-alias kubectx=kctx
-alias kubens=kns
+alias kctx=kubectx
+alias kns=kubens
