@@ -53,6 +53,11 @@ git clone git@github.com-il:ImaginateScata/dotfiles.git
 cd dotfiles
 ```
 
+## Fix terminal font
+
+Download [powerline](https://github.com/powerline/powerline/tree/develop/font) font.
+Set the terminal default font to `Source Code Pro for Powerline` font size 12.
+
 ## Usage
 
 ```bash
@@ -73,10 +78,25 @@ Some settings in iTerm need to be tweeked:
 * Appearance -> General -> Theme: Minimal
 * Appearance -> Tabs -> Show tab bar in fullscreen
 * Profile -> Colors -> Color Presents -> Solarized Dark
+* Profile -> Colors -> Basic Colors -> Background -> 002833
+* Profile -> Colors -> Basic Colors -> Selection -> 003440
+* Profile -> Colors -> Cursor Colors -> Cursor Text -> 003440
+* Profile -> Colors -> ANSI Colors -> Black -> Normal -> 003440
+* Profile -> Colors -> ANSI Colors -> Black -> Bright -> 586d74
 * Profile -> Text -> Use built-in Powerline glyphs
+* Profile -> Text -> Font -> Source Code Pro for Powerline
 * Profile -> Text -> Font -> 12
 * Profile -> Keys -> Delete key sends ^H -> Esc+
 * Profile -> Keys -> Presets -> Terminal.app Compatiability
+* Profile -> Terminal -> Scrollback Buffer -> Unlimited scrollback
+
+## Terminal Settings
+
+* Preferences -> Profiles -> Import -> Solarized Dark.terminal
+* Preferences -> Profiles -> Solarized Dark.terminal -> Default
+* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> Source Code Pro for Powerline
+* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> 12
+* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> Antialias Text
 
 ## Visual Studio Code
 
@@ -92,8 +112,9 @@ Some settings in iTerm need to be tweeked:
 * go : ms-vscode.go
 * Settings sync : shan.code-settings-sync options+shift+u
 * Git lens : eamodio.gitlens
-* shell-format :foxundermoon.shell-format
-
+* shell-format : foxundermoon.shell-format
+* Code Spell ChecK : streetsidesoftware.code-spell-checker
+* Python : ms-python.python
 
 ### Settings
 
@@ -129,3 +150,11 @@ Using settings sync, copy down the settings from [ImaginateScata](https://gist.g
 ### Settings
 
 * Ask to save logins and passwords - Off
+
+## SourceTree
+
+Due to a bug in sourcetree 4.x the terminal button does not open the reposiotry path. This is due to a
+permissions issue. To fix this download a [previous](https://www.sourcetreeapp.com/download-archives)
+version of sourcetree, open the application (do not move to applications folder), open a repository
+and click the terminal button. This will request the correct macOS permission to open iTerm2. Verify
+it opens to the correct terminal, quit and open the latest version and ensure that works.
