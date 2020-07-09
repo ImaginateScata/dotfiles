@@ -41,3 +41,8 @@ export AWS_PAGER=""
 # KUBE ALIASES
 alias kctx=kubectx
 alias kns=kubens
+
+# GCLOUD COMMANDS
+alias gcloud="docker run -it --rm --entrypoint=/usr/bin/gcloud --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
+alias gcloudd="docker run -it --rm --entrypoint=/bin/bash --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
+alias gsutil="docker run -it --rm --entrypoint=/usr/bin/gsutil --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
