@@ -78,8 +78,6 @@ brew 'awscli'
 
 #mas 'Noizio', id: 928871589
 
-#tap 'caskroom/drivers' was remove as itv caused issues with displaylink
-
 cask 'appcleaner'
 
 cask 'nordvpn'
