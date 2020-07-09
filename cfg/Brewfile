@@ -38,9 +38,9 @@ cask 'vlc' # Video player
 
 # Virtual Machines
 #cask 'virtualbox'
-cask 'homebrew/cask-versions/virtualbox-beta'
-cask 'virtualbox-extension-pack'
-cask 'vagrant'
+#cask 'homebrew/cask-versions/virtualbox-beta'
+#cask 'virtualbox-extension-pack'
+#cask 'vagrant'
 
 # Remote Desktop
 cask 'microsoft-remote-desktop-beta'
