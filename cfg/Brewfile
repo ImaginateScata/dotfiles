@@ -73,9 +73,6 @@ cask 'visual-studio-code'
 
 mas 'LastPass', id: 926036361 # Password manager
 
-# AWS CLI via Okta
-tap 'versent/taps'
-brew 'versent/taps/saml2aws'
 brew 'python'
 brew 'awscli'
 
