@@ -22,6 +22,11 @@ ln -s "${DOTFILES}/cfg/saml2aws" "${HOME}/.saml2aws"
 ln -s "${DOTFILES}/cfg/ssh_config" "${HOME}/.ssh/config"
 ln -s "${DOTFILES}/cfg/aws_config" "${HOME}/.aws/config"
 
+for font in "${DOTFILES}/cfg/fonts/"*".otf"; do
+    cp -f "${font}" "${HOME}/Library/Fonts/"
+    chmod 0644 "${HOME}/Library/Fonts/$(basename ${font})"
+done
+
 echo "..change file permissions"
 chmod 0400 "${DOTFILES}/cfg/ssh_config"
 chmod 0400 "${HOME}/.ssh/anthony"*
