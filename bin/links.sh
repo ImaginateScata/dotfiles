@@ -8,7 +8,8 @@ echo "..removing old files"
 rm -f "${HOME}/Brewfile" \
       "${HOME}/.zshrc" \
       "${HOME}/.saml2aws" \
-      "${HOME}/.ssh/config"
+      "${HOME}/.ssh/config" \
+      "${HOME}/.aws/config"
 
 echo "..creating new diretories"
 mkdir -p "${HOME}/.ssh/"
