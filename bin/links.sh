@@ -24,7 +24,7 @@ ln -s "${DOTFILES}/cfg/aws_config" "${HOME}/.aws/config"
 
 for font in "${DOTFILES}/cfg/fonts/"*".otf"; do
     cp -f "${font}" "${HOME}/Library/Fonts/"
-    chmod 0644 "${HOME}/Library/Fonts/$(basename ${font})"
+    chmod 0644 "${HOME}/Library/Fonts/$(basename "${font}")"
 done
 
 echo "..change file permissions"
