@@ -146,3 +146,56 @@ permissions issue. To fix this download a [previous](https://www.sourcetreeapp.c
 version of sourcetree, open the application (do not move to applications folder), open a repository
 and click the terminal button. This will request the correct macOS permission to open iTerm2. Verify
 it opens to the correct terminal, quit and open the latest version and ensure that works.
+
+## Mac Settings
+
+### General
+
+Remove unused from showing in dock
+
+* System Preferences -> General -> Appearance: -> Dark
+* System Preferences -> General -> Default web browser: -> Google Chrome
+* System Preferences -> Dock -> Show recent applications in Dock -> Untick
+
+On the dock drag down,
+* Applications -> Name, Folder, Grid
+* Downloads -> Date Added, Folder, Grid
+* Home -> Name, Folder, Grid
+
+### Bluebooth Keyboard
+
+When using a windows based keyboard the modifier keys need to be changed.
+Ensure the keyboard is syned and change only the bluetooth keyboard modifier keys.
+
+* System Preferences -> Keyboard -> Modifier Keys ... -> Option key -> Command
+* System Preferences -> Keyboard -> Modifier Keys ... -> Command key -> Option
+
+### Touch Bar
+
+* System Preferences -> Keyboard -> Customise Control Strip
+* Minimised: Brightness Slider, Mute, Volume Slider, Screen Lock
+* Maximised: Space, Keyboard Brightness, Brightness, Mute, Volume Slider, Show Desktop,
+Screenshot, Sreen Lock, Space
+
+
+### Finder Preferences
+
+* Finder -> Preferences -> General -> Hard disks
+* Finder -> Preferences -> Sidebar -> <username>
+
+### Touch ID
+
+* System Preferences -> Touch ID
+
+Add each finger, suggest Right Index, Right Middle, Left Index
+
+### Notifications
+
+* System Preferences -> Notifications -> Notification Centre sort order: Recent by App
+* Right Menu -> Today -> Remove all but weather (add location)
+
+### Top bar
+
+Battery -> Show Percentage
+Time -> Open Date & Time Preferences -> Clock -> Display the time with seconds
+Time -> Open Date & Time Preferences -> Clock -> Show date
