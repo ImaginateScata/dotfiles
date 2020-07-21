@@ -77,26 +77,14 @@ Some settings in iTerm need to be tweeked:
 
 * Appearance -> General -> Theme: Minimal
 * Appearance -> Tabs -> Show tab bar in fullscreen
-* Profile -> Colors -> Color Presents -> Solarized Dark
-* Profile -> Colors -> Basic Colors -> Background -> 002833
-* Profile -> Colors -> Basic Colors -> Selection -> 003440
-* Profile -> Colors -> Cursor Colors -> Cursor Text -> 003440
-* Profile -> Colors -> ANSI Colors -> Black -> Normal -> 003440
-* Profile -> Colors -> ANSI Colors -> Black -> Bright -> 586d74
-* Profile -> Text -> Use built-in Powerline glyphs
-* Profile -> Text -> Font -> Source Code Pro for Powerline
-* Profile -> Text -> Font -> 12
-* Profile -> Keys -> Delete key sends ^H -> Esc+
-* Profile -> Keys -> Presets -> Terminal.app Compatiability
-* Profile -> Terminal -> Scrollback Buffer -> Unlimited scrollback
+* Profile -> Other Actions... -> Import JSON Profiles... -> Solarized Dark.terminal
+* Profile -> Other Actions... -> Set as Default
+* Profile -> Colors -> Color Presents -> Import... -> Solarized Dark.itermcolors
 
 ## Terminal Settings
 
 * Preferences -> Profiles -> Import -> Solarized Dark.terminal
 * Preferences -> Profiles -> Solarized Dark.terminal -> Default
-* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> Source Code Pro for Powerline
-* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> 12
-* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> Antialias Text
 
 ## Visual Studio Code
 
