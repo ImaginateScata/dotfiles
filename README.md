@@ -90,19 +90,7 @@ Some settings in iTerm need to be tweeked:
 
 ### Extensions
 
-* Docker : ms-azuretools.vscode-docker
-* AWS Cloudformation : aws-scripting-guy.cform
-* Markdown Preview : shd101wyy.markdown-preview-enhanced
-* Markdown linter : davidanson.vscode-markdownlint
-* YAML : redhat.vscode-yaml
-* ignore : syler.ignore
-* Kubernetes : ms-kubernetes-tools.vscode-kubernetes-tools
-* go : ms-vscode.go
-* Settings sync : shan.code-settings-sync options+shift+u
-* Git lens : eamodio.gitlens
-* shell-format : foxundermoon.shell-format
-* Code Spell ChecK : streetsidesoftware.code-spell-checker
-* Python : ms-python.python
+* Settings sync : shan.code-settings-sync (options+shift+u to upload)
 
 ### Settings
 
