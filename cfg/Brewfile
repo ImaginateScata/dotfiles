@@ -5,7 +5,7 @@ cask 'osxfuse' # required for ntfs-3g
 brew 'ntfs-3g'
 
 # Company Tools
-cask 'google-drive-file-stream'
+cask 'google-drive'
 cask 'microsoft-office'
 #mas 'Slack', id: 803453959 # will fail on first install, apps must be 'purchased' manually first
 #cask 'skype7'
@@ -50,8 +50,8 @@ cask 'docker', restart_service: true
 brew 'docker-compose'
 
 # Kubernetes tools
+brew 'kubernetes-cli'
 brew 'helm'
-brew 'helm@2'
 brew 'kubectx'
 tap 'blendle/blendle'
 brew 'kns'
@@ -82,7 +82,7 @@ cask 'appcleaner'
 
 cask 'nordvpn'
 
-brew 'unix2dos'
+brew 'dos2unix'
 
 cask 'calibre'
 
