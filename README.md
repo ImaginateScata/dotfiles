@@ -4,6 +4,10 @@ My dot files and OSX bootstrap scripts.
 
 ## Setting up github.com
 
+```bash
+mkdir ~/.ssh
+```
+
 Set up ssh key:
 
 ```bash
@@ -53,7 +57,7 @@ git clone git@github.com-il:ImaginateScata/dotfiles.git
 cd dotfiles
 ```
 
-## Fix terminal font
+## Fix terminal font (maybe don't do)
 
 Download [powerline](https://github.com/powerline/powerline/tree/develop/font) font.
 Set the terminal default font to `Source Code Pro for Powerline` font size 12.
@@ -65,11 +69,20 @@ Set the terminal default font to `Source Code Pro for Powerline` font size 12.
 ./bin/install_homebrew.sh
 ./bin/post_install.sh
 ./bin/links.sh
+```
+
+Close and reopen the shell in order to get the required aliases loaded then execute. You may need to execute this twice
+to get everything installed, closing the terminal each time:
+
+```bash
 daily
 ```
 
-The first run of daily will contains some errors as the zsh plugins aree not yet installed.
+The first run of daily will contains some errors as the zsh plugins are not yet installed.
 After the second no errors should appear.
+
+* https://developer.apple.com/download/all/?q=Command%20Line%20Tools%20for%20Xcode and find the latest version
+* https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_12.5.1/Command_Line_Tools_for_Xcode_12.5.1.dmg
 
 ## iTerm Settings
 
@@ -85,6 +98,9 @@ Some settings in iTerm need to be tweeked:
 
 * Preferences -> Profiles -> Import -> Solarized Dark.terminal
 * Preferences -> Profiles -> Solarized Dark.terminal -> Default
+* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> Source Code Pro for Powerline
+* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> 12
+* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> Antialias Text
 
 ## Visual Studio Code
 
@@ -134,6 +150,13 @@ permissions issue. To fix this download a [previous](https://www.sourcetreeapp.c
 version of sourcetree, open the application (do not move to applications folder), open a repository
 and click the terminal button. This will request the correct macOS permission to open iTerm2. Verify
 it opens to the correct terminal, quit and open the latest version and ensure that works.
+
+### Preferences old version
+
+* Preferences -> General -> Terminal app -> Term2
+* Open a repo from the "Terminal" menu
+
+Delete old sourcetree application
 
 ## Mac Settings
 
