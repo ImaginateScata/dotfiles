@@ -45,3 +45,6 @@ alias kns=kubens
 alias gcloud="docker run -it --rm --entrypoint=/usr/bin/gcloud --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
 alias gcloudd="docker run -it --rm --entrypoint=/bin/bash --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
 alias gsutil="docker run -it --rm --entrypoint=/usr/bin/gsutil --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
+
+# ALLOW FOR EXTERNAL TO BE KILLED, also check sudo lsof +D "/Volumes/<device>"
+alias kill_eject="/usr/bin/killall -KILL QuickLookUIService"
