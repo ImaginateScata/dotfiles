@@ -10,7 +10,7 @@ alias updatesystem='sudo softwareupdate --install --verbose --recommended'
 alias antigen_update='antigen reset ; antigen update'
 
 ## OH MY ZSH
-alias oh_my_zsh_update='upgrade_oh_my_zsh'
+alias oh_my_zsh_update='omz update --unattended'
 
 ## DAILY UPDATE
 alias daily='oh_my_zsh_update ; antigen_update ; brewup ; pushd $HOME > /dev/null 2>&1 ; brew bundle install ; popd > /dev/null 2>&1 ; updatesystem'
