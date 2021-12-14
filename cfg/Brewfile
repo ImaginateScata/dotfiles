@@ -1,23 +1,28 @@
 brew 'mas' # Command line tools for app store https://github.com/mas-cli/mas
 
+# Terminal
+brew 'starship'
+tap 'homebrew/cask-fonts'
+cask 'font-hack-nerd-font'
+brew 'zsh-syntax-highlighting'
+brew 'zsh-autosuggestions'
+
 # Tool for writing to ntfs drives
-cask 'osxfuse' # required for ntfs-3g
-brew 'ntfs-3g'
+#cask 'osxfuse' # required for ntfs-3g
+#brew gromgit/fuse/ntfs-3g-mac
+#brew 'ntfs-3g'
 
 # Company Tools
 cask 'google-drive'
 cask 'microsoft-office'
-#mas 'Slack', id: 803453959 # will fail on first install, apps must be 'purchased' manually first
-#cask 'skype7'
-
-cask 'google-backup-and-sync'
+mas 'Slack', id: 803453959 # will fail on first install, apps must be 'purchased' manually first
+mas 'menu-world-time', id: 1446377255
 
 # Source control
 brew 'git'
 cask 'sourcetree'
-cask 'github'
 
-brew 'ansible'
+#brew 'ansible'
 
 # Browsers
 cask 'firefox'
@@ -26,7 +31,7 @@ cask 'opera'
 cask 'tor-browser'
 cask 'brave-browser'
 
-cask 'silverlight'
+#cask 'silverlight'
 
 cask 'authy'
 
@@ -43,11 +48,14 @@ cask 'vlc' # Video player
 #cask 'vagrant'
 
 # Remote Desktop
-cask 'microsoft-remote-desktop-beta'
+#cask 'microsoft-remote-desktop-beta'
 
 # Docker tools
-cask 'docker', restart_service: true
-brew 'docker-compose'
+#cask 'docker', restart_service: true
+#brew 'docker-compose'
+brew 'docker'
+brew 'lima'
+brew 'colima'
 
 # Kubernetes tools
 brew 'kubernetes-cli'
@@ -63,8 +71,9 @@ brew 'stern'
 brew 'istioctl'
 brew 'pcre'
 
-tap 'int128/kubelogin'
-brew 'kubelogin'
+# ME Bank SSO Login Kubernetes
+#tap 'int128/kubelogin'
+#brew 'kubelogin'
 
 # IDE / Text Editor
 cask 'sublime-text'
@@ -75,6 +84,7 @@ mas 'LastPass', id: 926036361 # Password manager
 
 brew 'python'
 brew 'awscli'
+cask 'google-cloud-sdk'
 
 #mas 'Noizio', id: 928871589
 
@@ -86,6 +96,16 @@ brew 'dos2unix'
 
 cask 'calibre'
 
+#System debugging
 cask 'launchcontrol'
 
-brew 'antigen'
+#brew 'antigen'
+
+#cask 'discord'
+
+brew 'imagemagick'
+
+cask 'stats'
+
+cask 'lulu'
+

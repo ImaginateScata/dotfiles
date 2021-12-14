@@ -6,14 +6,8 @@ alias brewup='brew update ; brew upgrade ; brew cleanup ; brew doctor'
 ## MAC UPDATE
 alias updatesystem='sudo softwareupdate --install --verbose --recommended'
 
-## ANTIGEN
-alias antigen_update='antigen reset ; antigen update'
-
-## OH MY ZSH
-alias oh_my_zsh_update='omz update --unattended'
-
 ## DAILY UPDATE
-alias daily='oh_my_zsh_update ; antigen_update ; brewup ; pushd $HOME > /dev/null 2>&1 ; brew bundle install ; popd > /dev/null 2>&1 ; updatesystem'
+alias daily='brewup ; pushd $HOME > /dev/null 2>&1 ; brew bundle install ; popd > /dev/null 2>&1 ; updatesystem'
 
 # TIME UPDATE
 # shellcheck disable=SC2142
@@ -41,10 +35,14 @@ export AWS_PAGER=""
 alias kctx=kubectx
 alias kns=kubens
 
-# GCLOUD COMMANDS
-alias gcloud="docker run -it --rm --entrypoint=/usr/bin/gcloud --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
-alias gcloudd="docker run -it --rm --entrypoint=/bin/bash --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
-alias gsutil="docker run -it --rm --entrypoint=/usr/bin/gsutil --volume ${HOME}/.config/gcloud/:/root/.config/gcloud/ google/cloud-sdk"
-
 # ALLOW FOR EXTERNAL TO BE KILLED, also check sudo lsof +D "/Volumes/<device>"
 alias kill_eject="/usr/bin/killall -KILL QuickLookUIService"
+
+# WHEN THE TOUCH BAR GETS STUCK ON FUNCTION KEYS, RESTART THE SERVICE
+alias fix_touch_bar="sudo pkill TouchBarServer"
+
+# change helm 3 version with symlink
+# helm3_on() { ln -sf "$(find /usr/local/Cellar/helm/3.*/bin/helm -name 'helm')" /usr/local/bin/helm }
+
+# change kubectl version with symlink
+# kubectl_on() { ln -sf "$(find /usr/local/Cellar/kubernetes-cli/1.*/bin/kubectl -name 'kubectl')" /usr/local/bin/kubectl }

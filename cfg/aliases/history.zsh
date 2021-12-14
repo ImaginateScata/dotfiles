@@ -1,5 +1,0 @@
-export HISTFILE=~/.history
-export SAVEHIST=100000
-export HISTSIZE=100000
-setopt APPEND_HISTORY
-setopt SHARE_HISTORY

@@ -2,6 +2,8 @@
 
 My dot files and OSX bootstrap scripts.
 
+Currently works for macOS Monterey 12 with Apple Silicon
+
 ## Setting up github.com
 
 ```bash
@@ -48,6 +50,18 @@ Host github.com-il
   IdentitiesOnly yes
 ```
 
+## Fresh install no go
+
+On a fresh install `git` is not present so you cannot clone the repository. To overcome this, copy the contents of
+[install_xcode.sh](https://github.com/ImaginateScata/dotfiles/blob/master/bin/install_xcode.sh) to your local machine
+under the file `${HOME}/install_xcode.sh`. This will install the command line tools for you.
+
+Now execute:
+
+```bash
+bash ${HOME}/install_xcode.sh
+```
+
 ## Clone the repo
 
 ```bash
@@ -57,50 +71,35 @@ git clone git@github.com-il:ImaginateScata/dotfiles.git
 cd dotfiles
 ```
 
-## Fix terminal font (maybe don't do)
-
-Download [powerline](https://github.com/powerline/powerline/tree/develop/font) font.
-Set the terminal default font to `Source Code Pro for Powerline` font size 12.
-
 ## Usage
 
 ```bash
 ./bin/install_xcode.sh
+./bin/install_rosetta.sh
 ./bin/install_homebrew.sh
-./bin/post_install.sh
+source ${HOME}/.zshrc
 ./bin/links.sh
+./bin/post_install.sh
 ```
 
-Close and reopen the shell in order to get the required aliases loaded then execute. You may need to execute this twice
-to get everything installed, closing the terminal each time:
+Cleanup the tooling and install all of the brew packages:
 
 ```bash
+source ${HOME}/.zshrc
 daily
 ```
 
-The first run of daily will contains some errors as the zsh plugins are not yet installed.
-After the second no errors should appear.
-
-* https://developer.apple.com/download/all/?q=Command%20Line%20Tools%20for%20Xcode and find the latest version
-* https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_12.5.1/Command_Line_Tools_for_Xcode_12.5.1.dmg
-
 ## iTerm Settings
 
-Some settings in iTerm need to be tweeked:
+Some settings in iTerm need to be tweaked:
 
 * Appearance -> General -> Theme: Minimal
 * Appearance -> Tabs -> Show tab bar in fullscreen
-* Profile -> Other Actions... -> Import JSON Profiles... -> Solarized Dark.terminal
-* Profile -> Other Actions... -> Set as Default
-* Profile -> Colors -> Color Presents -> Import... -> Solarized Dark.itermcolors
+* Profile -> Other Actions... -> Import JSON Profiles... -> Basic.terminal
 
 ## Terminal Settings
 
-* Preferences -> Profiles -> Import -> Solarized Dark.terminal
-* Preferences -> Profiles -> Solarized Dark.terminal -> Default
-* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> Source Code Pro for Powerline
-* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> 12
-* Preferences -> Profiles -> Solarized Dark.terminal -> Text -> Font -> Antialias Text
+* Preferences -> Profiles -> Import -> Basic.terminal
 
 ## Visual Studio Code
 
@@ -131,13 +130,26 @@ Using settings sync, copy down the settings from [ImaginateScata](https://gist.g
 
 * Offer to save passwords - off
 
-## Firefox Extenstions
+## Firefox Extensions
 
 * [One Tab](https://addons.mozilla.org/en-US/firefox/addon/onetab/)
 * [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
 * [LastPass](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/)
 * [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/)
-* [Okta](https://addons.mozilla.org/en-US/firefox/addon/okta-browser-plugin/)
+
+## Brave Extensions
+
+* [One Tab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)
+* [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
+* [LastPass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
+* [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
+
+## Opera Extensions
+
+* [One Tab](https://addons.opera.com/en/extensions/details/open-tabs/)
+* [uBlock Origin](https://addons.opera.com/en/extensions/details/ublock/)
+* [LastPass](https://addons.opera.com/en/extensions/details/lastpass/)
+* [HTTPS Everywhere](https://addons.opera.com/en/extensions/details/https-everywhere/)
 
 ### Settings
 
@@ -166,12 +178,17 @@ Remove unused from showing in dock
 
 * System Preferences -> General -> Appearance: -> Dark
 * System Preferences -> General -> Default web browser: -> Google Chrome
-* System Preferences -> Dock -> Show recent applications in Dock -> Untick
+* System Preferences -> Dock & Menu Bar -> Show recent applications in Dock -> Untick
 
 On the dock drag down,
+
 * Applications -> Name, Folder, Grid
 * Downloads -> Date Added, Folder, Grid
 * Home -> Name, Folder, Grid
+
+* Finder -> shift+command+h -> command+up -> Drag below downloads
+* Finder -> Preferences -> General -> Hard disk -> Tick
+* Finder -> Preferences -> Sidebar -> Locations -> MacBook Pro
 
 ### Bluebooth Keyboard
 
@@ -180,19 +197,6 @@ Ensure the keyboard is syned and change only the bluetooth keyboard modifier key
 
 * System Preferences -> Keyboard -> Modifier Keys ... -> Option key -> Command
 * System Preferences -> Keyboard -> Modifier Keys ... -> Command key -> Option
-
-### Touch Bar
-
-* System Preferences -> Keyboard -> Customise Control Strip
-* Minimised: Brightness Slider, Mute, Volume Slider, Screen Lock
-* Maximised: Space, Keyboard Brightness, Brightness, Mute, Volume Slider, Show Desktop,
-Screenshot, Sreen Lock, Space
-
-
-### Finder Preferences
-
-* Finder -> Preferences -> General -> Hard disks
-* Finder -> Preferences -> Sidebar -> <username>
 
 ### Touch ID
 
@@ -207,6 +211,18 @@ Add each finger, suggest Right Index, Right Middle, Left Index
 
 ### Top bar
 
-Battery -> Show Percentage
-Time -> Open Date & Time Preferences -> Clock -> Display the time with seconds
-Time -> Open Date & Time Preferences -> Clock -> Show date
+System Preferences -> Dock & Menu Bar -> Battery -> Show Percentage
+System Preferences -> Dock & Menu Bar -> Bluetooth -> Show in Menu Bar
+System Preferences -> Dock & Menu Bar -> Clock -> Display the time with seconds
+System Preferences -> Dock & Menu Bar -> Clock -> Show date
+System Preferences -> Dock & Menu Bar -> Time Machine -> Show in Menu Bar
+
+## Google Drive
+
+Stream files
+
+## f.lux
+
+Classic f.lux
+6:00am
+Start f.lux at login

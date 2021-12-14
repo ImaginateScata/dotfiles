@@ -1,21 +1,22 @@
 #!/bin/bash
-
+####
+# Install xcode command line tools if not already present
+####
 # See http://apple.stackexchange.com/questions/107307/how-can-i-install-the-command-line-tools-completely-from-the-command-line
-set -x
 echo "Checking Xcode CLI tools"
 
 # Only run if the tools are not installed yet
 # Check if xcode is installed and verify its path
 if type xcode-select >&- && xpath=$( xcode-select --print-path ) &&
-     test -d "${xpath}" && test -x "${xpath}" > /dev/null 2>&1 && [ -f '/Library/Developer/CommandLineTools/usr/bin/xcrun' ] ; then
+     test -d "${xpath}" && test -x "${xpath}" > /dev/null 2>&1 && pkgutil --pkg-info=com.apple.pkg.CLTools_Executables > /dev/null 2>&1 ; then
   echo "Xcode CLI tools OK"
 else
   echo "Xcode CLI tools not found. Installing them..."
 
   # install the tool for our specific OS version
-  version=$(sw_vers -productVersion) 
+  version=$(sw_vers -productVersion)
 
-  # sw_vers in 10.14 is 10.14 while for 10.13 its 10.13.x so need to strip out the last version 
+  # sw_vers in 10.14 is 10.14 while for 10.13 its 10.13.x so need to strip out the last version
   dots=$(echo "${version}" | grep -o "\." | wc -l)
   if [ "${dots}" -gt "1" ]; then
     version=$(echo "${version}" | sed "s:.[[:digit:]]*.$::g")
@@ -23,6 +24,10 @@ else
 
   if [ "${version}" == "10.15" ]; then
 	version="-11"
+  fi
+
+  if [[ "${version}" == 12.* ]]; then
+        version="13"
   fi
 
   touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
@@ -34,5 +39,5 @@ else
     sed -e 's/Label://' |
     sed -e 's/^ *//' |
     tr -d '\n')
-  softwareupdate --install "${PROD}" --verbose; 
+  softwareupdate --install "${PROD}" --verbose;
 fi

@@ -1,0 +1,6 @@
+Host github.com-il
+  Hostname github.com
+  User anthony.scata@imaginatelabs.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/anthonyscata_imaginatelabs_github
+  IdentitiesOnly yes

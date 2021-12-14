@@ -1,4 +1,7 @@
 #!/bin/bash
+####
+# Setup links to dotfiles and file permissions
+####
 
 DOTFILES="${HOME}/Code/ImaginateScata/github.com/dotfiles"
 
@@ -7,7 +10,6 @@ echo "Setting links from '${DOTFILES}'"
 echo "..removing old files"
 rm -f "${HOME}/Brewfile" \
       "${HOME}/.zshrc" \
-      "${HOME}/.saml2aws" \
       "${HOME}/.ssh/config" \
       "${HOME}/.aws/config"
 
@@ -18,14 +20,8 @@ mkdir -p "${HOME}/.aws/"
 echo "..linking files"
 ln -s "${DOTFILES}/cfg/Brewfile" "${HOME}/Brewfile"
 ln -s "${DOTFILES}/cfg/zshrc" "${HOME}/.zshrc"
-ln -s "${DOTFILES}/cfg/saml2aws" "${HOME}/.saml2aws"
 ln -s "${DOTFILES}/cfg/ssh_config" "${HOME}/.ssh/config"
 ln -s "${DOTFILES}/cfg/aws_config" "${HOME}/.aws/config"
-
-for font in "${DOTFILES}/cfg/fonts/"*".otf"; do
-    cp -f "${font}" "${HOME}/Library/Fonts/"
-    chmod 0644 "${HOME}/Library/Fonts/$(basename "${font}")"
-done
 
 echo "..change file permissions"
 chmod 0400 "${DOTFILES}/cfg/ssh_config"
