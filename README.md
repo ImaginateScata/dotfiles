@@ -13,7 +13,7 @@ mkdir ~/.ssh
 Set up ssh key:
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "anthony.scata@imaginatelabs.com" -f "${HOME}/.ssh/anthonyscata_imaginatelabs_github"
+ssh-keygen -t ed25519 -C "anthony.scata@imaginatelabs.com" -f "${HOME}/.ssh/anthonyscata_imaginatelabs_github"
 ```
 
 Copy public key into variable:
